@@ -254,7 +254,7 @@ def colour_hyperspectral_line(λs,img):
 
 
 # Cell
-def spectra2sRGB(λs,Is):
+def spectra2sRGB(λs,Is:"1D spectrum array"):
     xyz = np.zeros((3,),dtype=np.float64)
     for λ,I in zip(λs,Is):
         xyz += wavelength2xyz(λ)*I

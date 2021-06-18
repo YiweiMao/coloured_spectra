@@ -1,0 +1,44 @@
+package:
+  name: coloured_spectra
+  version: 0.0.10
+source:
+  sha256: f480eb5519eb0179f9d5ece6ffc051e68e3976647499ebddb1e734b3ebadd710
+  url: https://files.pythonhosted.org/packages/93/3e/a4657c828862a6f5655d8c9b587f28e3703557be419df4eb22db646daf77/coloured_spectra-0.0.10.tar.gz
+about:
+  dev_url: https://YiweiMao.github.io
+  doc_url: https://YiweiMao.github.io
+  home: https://YiweiMao.github.io
+  license: Apache Software
+  license_family: APACHE
+  summary: Got a spectra? Use this to find what is the observed colour.
+build:
+  noarch: python
+  number: '0'
+  script: '{{ PYTHON }} -m pip install . -vv'
+extra:
+  recipe-maintainers:
+  - YiweiMao
+requirements:
+  host:
+  - pip
+  - python
+  - packaging
+  - numpy>="^1.13.3"
+  - matplotlib>="^2.1.1"
+  - tqdm
+  - opencv-python
+  - pandas
+  - pillow
+  run:
+  - pip
+  - python
+  - packaging
+  - numpy>="^1.13.3"
+  - matplotlib>="^2.1.1"
+  - tqdm
+  - opencv-python
+  - pandas
+  - pillow
+test:
+  imports:
+  - coloured_spectra
